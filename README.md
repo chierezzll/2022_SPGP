@@ -11,7 +11,7 @@
 ![image](https://user-images.githubusercontent.com/70653452/160665220-6553afd7-b379-4bee-a6d6-314c79a5cde6.png)
 
 ## 예상 게임 흐름
-![예상 게임 흐름](https://user-images.githubusercontent.com/70653452/160658365-c727e109-8740-49e2-8772-d5e01ab55eb7.PNG)
+![image](https://user-images.githubusercontent.com/70653452/160665406-9b5d11f6-461e-469f-9d24-c619a40a8436.png)
 
 ### 게임 진행
 - 적AI는 빨간색 화살표를 따라서 이동한다
