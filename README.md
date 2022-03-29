@@ -8,7 +8,7 @@
 - 포켓몬과 디펜스 게임을 합친 모바일 게임
 
 ## 개발 범위
-![개발범위](https://user-images.githubusercontent.com/70653452/160658351-8e6e49ec-8ccb-46b1-9113-8f273a4cadf2.PNG)
+![image](https://user-images.githubusercontent.com/70653452/160665220-6553afd7-b379-4bee-a6d6-314c79a5cde6.png)
 
 ## 예상 게임 흐름
 ![예상 게임 흐름](https://user-images.githubusercontent.com/70653452/160658365-c727e109-8740-49e2-8772-d5e01ab55eb7.PNG)
@@ -39,4 +39,4 @@
 - ![image](https://user-images.githubusercontent.com/70653452/160663722-0d5c05ba-be9f-4b29-89be-92e9f1fb1742.png)
 
 ## 개발 계획
-![개발 계획](https://user-images.githubusercontent.com/70653452/160658359-39faecdb-9c46-4c71-bbd5-7d1f4eea4d29.PNG)
+![image](https://user-images.githubusercontent.com/70653452/160665289-78130448-59b6-401c-91fd-e8a0c7e7e3e7.png)
