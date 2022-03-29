@@ -36,7 +36,7 @@
 
 ### 진화
 - 같은 포켓몬을 3마리 배치하면 진화 시킬 수 있다
-- ![image](https://user-images.githubusercontent.com/70653452/160663722-0d5c05ba-be9f-4b29-89be-92e9f1fb1742.png)
+![image](https://user-images.githubusercontent.com/70653452/160663722-0d5c05ba-be9f-4b29-89be-92e9f1fb1742.png)
 
 ## 개발 계획
 ![image](https://user-images.githubusercontent.com/70653452/160665289-78130448-59b6-401c-91fd-e8a0c7e7e3e7.png)
