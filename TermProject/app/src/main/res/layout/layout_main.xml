@@ -20,16 +20,98 @@
         app:layout_constraintVertical_bias="0.698" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/shopButton"
         android:layout_width="60dp"
         android:layout_height="62dp"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="16dp"
         android:scaleType="fitCenter"
+        android:onClick="onButton1Clicked"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:srcCompat="@drawable/shop" />
+
+    <ImageButton
+        android:id="@+id/test1"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:srcCompat="@drawable/test1"
+        />
+
+    <ImageButton
+        android:id="@+id/test2"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:srcCompat="@drawable/test2"
+        />
+
+
+    <ImageButton
+        android:id="@+id/test3"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:srcCompat="@drawable/test3"
+        />
+
+
+    <ImageButton
+        android:id="@+id/test4"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="370dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:srcCompat="@drawable/test4"
+        />
+
+    <ImageButton
+        android:id="@+id/test5"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="440dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:srcCompat="@drawable/test5"
+        />
+
+    <ImageButton
+        android:id="@+id/re_roll"
+        android:layout_width="70dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:visibility="invisible"
+        android:onClick="onButtonReRoll"
+        app:layout_constraintStart_toEndOf="@+id/shopButton"
+        app:layout_constraintTop_toTopOf="@+id/shopButton"
+        app:srcCompat="@drawable/re_roll"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
