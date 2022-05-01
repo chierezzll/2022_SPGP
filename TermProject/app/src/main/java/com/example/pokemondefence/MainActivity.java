@@ -4,11 +4,21 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
     int[] images = new int[] {R.drawable.test1, R.drawable.test2, R.drawable.test3, R.drawable.test4, R.drawable.test5};
+
+    // 애니메이션 변수 선언
+    Animation anim_test;
+    Button btn_test;
+
+
+
 
     ImageButton imageView1;
     ImageButton imageView2;
@@ -25,12 +35,26 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_main);
 
+
+        // 애니메이션 리소스 할당
+        anim_test = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims);
+        btn_test = findViewById(R.id.btn_test);
+
+
         imageView1 = findViewById(R.id.test1);
         imageView2 = findViewById(R.id.test2);
         imageView3 = findViewById(R.id.test3);
         imageView4 = findViewById(R.id.test4);
         imageView5 = findViewById(R.id.test5);
         reRoll = findViewById(R.id.re_roll);
+
+        // 버튼 누르면 애니메이션 실행
+        btn_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                btn_test.startAnimation(anim_test);
+            }
+        });
 
     }
     int getRandom(int range, int min) {
