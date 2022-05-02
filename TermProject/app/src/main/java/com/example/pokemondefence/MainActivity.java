@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 애니메이션 변수 선언
     Animation anim_test;
-    Button btn_test;
+    ImageButton btn_test;
 
 
 
