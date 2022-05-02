@@ -1,8 +1,10 @@
 package com.example.pokemondefence;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -15,10 +17,9 @@ public class MainActivity extends AppCompatActivity {
 
     // 애니메이션 변수 선언
     Animation anim_test;
+    Animation anim_test2;
     ImageButton btn_test;
-
-
-
+    ImageView monster2;
 
     ImageButton imageView1;
     ImageButton imageView2;
@@ -38,7 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         // 애니메이션 리소스 할당
         anim_test = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims);
+        anim_test2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims2);
         btn_test = findViewById(R.id.btn_test);
+        monster2 = findViewById(R.id.monster2);
 
 
         imageView1 = findViewById(R.id.test1);
@@ -52,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
         btn_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 btn_test.startAnimation(anim_test);
+                monster2.startAnimation(anim_test2);
+
             }
         });
 

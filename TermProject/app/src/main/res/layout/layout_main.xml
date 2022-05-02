@@ -37,7 +37,17 @@
 
             android:src="@mipmap/monster"
             />
+        <ImageView
 
+            android:id="@+id/monster2"
+            android:layout_width="57dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="54dp"
+            android:background="@drawable/shape_for_circle"
+            android:layout_marginTop="17dp"
+            android:padding="7dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@mipmap/monster" />
 
 
     </FrameLayout>
