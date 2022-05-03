@@ -127,15 +127,15 @@ public class MainActivity extends AppCompatActivity {
     public void onButtonReRoll(View view) {
         count = count - 2;
         coinCount.setText(count+"");
-        int rand = getRandom(5,0 );
+        int rand = getRandom(12,0 );
         shop1.setImageResource(images[rand]);
-        rand = getRandom(5, 0);
+        rand = getRandom(12, 0);
         shop2.setImageResource(images[rand]);
-        rand = getRandom(5, 0);
+        rand = getRandom(12, 0);
         shop3.setImageResource(images[rand]);
-        rand = getRandom(5, 0);
+        rand = getRandom(12, 0);
         shop4.setImageResource(images[rand]);
-        rand = getRandom(5, 0);
+        rand = getRandom(12, 0);
         shop5.setImageResource(images[rand]);
     }
 }
