@@ -19,10 +19,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.698" />
 
+
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteX="-26dp"
         tools:layout_editor_absoluteY="0dp">
 
         <ImageButton
@@ -30,20 +31,20 @@
             android:layout_width="57dp"
             android:layout_height="50dp"
             android:layout_marginLeft="54dp"
-            android:background="@drawable/shape_for_circle"
             android:layout_marginTop="17dp"
+            android:background="@drawable/shape_for_circle"
             android:padding="7dp"
             android:scaleType="centerInside"
 
-            android:src="@mipmap/monster"
-            />
+            android:src="@mipmap/monster" />
+
         <ImageView
             android:id="@+id/monster2"
             android:layout_width="57dp"
             android:layout_height="50dp"
             android:layout_marginLeft="54dp"
-            android:background="@drawable/shape_for_circle"
             android:layout_marginTop="17dp"
+            android:background="@drawable/shape_for_circle"
             android:padding="7dp"
             android:scaleType="centerInside"
             app:srcCompat="@mipmap/monster" />
@@ -53,18 +54,19 @@
             android:layout_width="57dp"
             android:layout_height="50dp"
             android:layout_marginLeft="54dp"
-            android:background="@drawable/shape_for_circle"
             android:layout_marginTop="17dp"
+            android:background="@drawable/shape_for_circle"
             android:padding="7dp"
             android:scaleType="centerInside"
             app:srcCompat="@mipmap/monster" />
+
         <ImageView
             android:id="@+id/monster4"
             android:layout_width="57dp"
             android:layout_height="50dp"
             android:layout_marginLeft="54dp"
-            android:background="@drawable/shape_for_circle"
             android:layout_marginTop="17dp"
+            android:background="@drawable/shape_for_circle"
             android:padding="7dp"
             android:scaleType="centerInside"
             app:srcCompat="@mipmap/monster" />
@@ -74,16 +76,14 @@
             android:layout_width="57dp"
             android:layout_height="50dp"
             android:layout_marginLeft="54dp"
-            android:background="@drawable/shape_for_circle"
             android:layout_marginTop="17dp"
+            android:background="@drawable/shape_for_circle"
             android:padding="7dp"
             android:scaleType="centerInside"
             app:srcCompat="@mipmap/monster" />
 
 
-
     </FrameLayout>
-
 
     <ImageButton
         android:id="@+id/shopButton"
@@ -101,11 +101,13 @@
 
     <ImageButton
         android:id="@+id/test1"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="160dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="120dp"
         android:layout_marginTop="4dp"
-        android:scaleType="fitCenter"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/shape_for_rect"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/shopButton"
         app:layout_constraintTop_toTopOf="@+id/shopButton"
@@ -114,11 +116,13 @@
 
     <ImageButton
         android:id="@+id/test2"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="230dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="190dp"
         android:layout_marginTop="4dp"
-        android:scaleType="fitCenter"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/shape_for_rect"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/shopButton"
         app:layout_constraintTop_toTopOf="@+id/shopButton"
@@ -128,11 +132,13 @@
 
     <ImageButton
         android:id="@+id/test3"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="300dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="260dp"
         android:layout_marginTop="4dp"
-        android:scaleType="fitCenter"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/shape_for_rect"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/shopButton"
         app:layout_constraintTop_toTopOf="@+id/shopButton"
@@ -142,11 +148,13 @@
 
     <ImageButton
         android:id="@+id/test4"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="370dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="330dp"
         android:layout_marginTop="4dp"
-        android:scaleType="fitCenter"
+        android:padding="7dp"
+        android:scaleType="centerInside"
+        android:background="@drawable/shape_for_rect"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/shopButton"
         app:layout_constraintTop_toTopOf="@+id/shopButton"
@@ -155,11 +163,13 @@
 
     <ImageButton
         android:id="@+id/test5"
-        android:layout_width="70dp"
-        android:layout_height="61dp"
-        android:layout_marginStart="440dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="400dp"
         android:layout_marginTop="4dp"
+        android:padding="7dp"
         android:scaleType="fitCenter"
+        android:background="@drawable/shape_for_rect"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/shopButton"
         app:layout_constraintTop_toTopOf="@+id/shopButton"
@@ -170,7 +180,7 @@
         android:id="@+id/re_roll"
         android:layout_width="70dp"
         android:layout_height="61dp"
-        android:layout_marginStart="60dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="4dp"
         android:scaleType="fitCenter"
         android:visibility="invisible"
