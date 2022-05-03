@@ -74,17 +74,20 @@ public class MainActivity extends AppCompatActivity {
         btn_test.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                btn_test.startAnimation(anim_test);
-                monster2.startAnimation(anim_test2);
-                monster3.startAnimation(anim_test3);
-                monster4.startAnimation(anim_test4);
-                monster5.startAnimation(anim_test5);
-
+                startAnim();
             }
         });
 
     }
+
+    private void startAnim() {
+        btn_test.startAnimation(anim_test);
+        monster2.startAnimation(anim_test2);
+        monster3.startAnimation(anim_test3);
+        monster4.startAnimation(anim_test4);
+        monster5.startAnimation(anim_test5);
+    }
+
     int getRandom(int range, int min) {
         return (int)(Math.random() * range) + min;
     }
