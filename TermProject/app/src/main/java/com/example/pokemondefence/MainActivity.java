@@ -8,6 +8,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     // int[] images = new int[] {R.drawable.test1, R.drawable.test2, R.drawable.test3, R.drawable.test4, R.drawable.test5};
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     ImageButton reRoll;
     ImageView coin;
+
+    // 돈
+    TextView coinCount;
+    int count = 0;
+
     int imageIndex = 0;
 
 
@@ -54,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
         monster4 = findViewById(R.id.monster4);
         monster5 = findViewById(R.id.monster5);
 
-
+        // 상점 목록
         shop1 = findViewById(R.id.shop1);
         shop2 = findViewById(R.id.shop2);
         shop3 = findViewById(R.id.shop3);
@@ -62,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
         shop5 = findViewById(R.id.shop5);
         reRoll = findViewById(R.id.re_roll);
         coin = findViewById(R.id.coin);
+        coinCount = findViewById(R.id.coin_count);
 
         // 버튼 누르면 애니메이션 실행
         btn_test.setOnClickListener(new View.OnClickListener() {
@@ -96,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
             shop5.setVisibility(View.VISIBLE);
             reRoll.setVisibility(View.VISIBLE);
             coin.setVisibility(View.VISIBLE);
+            coinCount.setVisibility(View.VISIBLE);
             imageIndex = 1;
         }
 
@@ -107,6 +115,7 @@ public class MainActivity extends AppCompatActivity {
             shop5.setVisibility(View.INVISIBLE);
             reRoll.setVisibility(View.INVISIBLE);
             coin.setVisibility(View.INVISIBLE);
+            coinCount.setVisibility(View.INVISIBLE);
             imageIndex = 0;
         }
     }
