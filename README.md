@@ -12,6 +12,8 @@
 
 ## 진행 상황
 ![image](https://user-images.githubusercontent.com/70653452/166465039-e9442bdc-ea71-4061-979f-cb61271f0755.png)
+- 공격 이펙트 리소스 부족
+- 적 AI의 HP 미설정, Generator 미구현
 
 ## 커밋
 ![image](https://user-images.githubusercontent.com/70653452/166462238-73c98773-a3a1-460f-8153-bbe35b187ce4.png)
