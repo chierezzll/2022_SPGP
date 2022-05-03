@@ -7,9 +7,6 @@
 ![게임 컨셉](https://user-images.githubusercontent.com/70653452/160658340-f106ce23-7b9a-4800-9542-7e951733ad66.PNG)
 - 포켓몬과 디펜스 게임을 합친 모바일 게임
 
-## 개발 범위
-![image](https://user-images.githubusercontent.com/70653452/160665220-6553afd7-b379-4bee-a6d6-314c79a5cde6.png)
-
 ## 진행 상황
 ![image](https://user-images.githubusercontent.com/70653452/166466425-a0dc042f-34f8-442f-812e-1fe6f317ff5b.png)
 - 공격 이펙트 리소스 부족 -> 공격 기능을 구현한 후에 넣을 예정
