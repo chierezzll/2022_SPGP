@@ -11,8 +11,9 @@
 ![image](https://user-images.githubusercontent.com/70653452/160665220-6553afd7-b379-4bee-a6d6-314c79a5cde6.png)
 
 ## 진행 상황
-![image](https://user-images.githubusercontent.com/70653452/166465039-e9442bdc-ea71-4061-979f-cb61271f0755.png)
-- 공격 이펙트 리소스 부족
+![image](https://user-images.githubusercontent.com/70653452/166466425-a0dc042f-34f8-442f-812e-1fe6f317ff5b.png)
+- 공격 이펙트 리소스 부족 -> 공격 기능을 구현한 후에 넣을 예정
+- 레벨별 등장 확률, 포켓몬 가격 미구현 -> 게임 기능을 구현한 후에 표시할 예정
 - 적 AI의 HP 미설정, Generator 미구현
 
 ## 커밋
