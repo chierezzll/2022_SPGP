@@ -18,8 +18,14 @@ public class MainActivity extends AppCompatActivity {
     // 애니메이션 변수 선언
     Animation anim_test;
     Animation anim_test2;
+    Animation anim_test3;
+    Animation anim_test4;
+    Animation anim_test5;
     ImageButton btn_test;
     ImageView monster2;
+    ImageView monster3;
+    ImageView monster4;
+    ImageView monster5;
 
     ImageButton imageView1;
     ImageButton imageView2;
@@ -40,8 +46,14 @@ public class MainActivity extends AppCompatActivity {
         // 애니메이션 리소스 할당
         anim_test = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims);
         anim_test2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims2);
+        anim_test3 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims3);
+        anim_test4 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims4);
+        anim_test5 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims5);
         btn_test = findViewById(R.id.btn_test);
         monster2 = findViewById(R.id.monster2);
+        monster3 = findViewById(R.id.monster3);
+        monster4 = findViewById(R.id.monster4);
+        monster5 = findViewById(R.id.monster5);
 
 
         imageView1 = findViewById(R.id.test1);
@@ -58,6 +70,9 @@ public class MainActivity extends AppCompatActivity {
 
                 btn_test.startAnimation(anim_test);
                 monster2.startAnimation(anim_test2);
+                monster3.startAnimation(anim_test3);
+                monster4.startAnimation(anim_test4);
+                monster5.startAnimation(anim_test5);
 
             }
         });
