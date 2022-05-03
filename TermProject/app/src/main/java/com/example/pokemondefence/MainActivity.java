@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 돈
     TextView coinCount;
-    int count = 0;
+    int count = 100;
 
     int imageIndex = 0;
 
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
         reRoll = findViewById(R.id.re_roll);
         coin = findViewById(R.id.coin);
         coinCount = findViewById(R.id.coin_count);
+        coinCount.setText(count+"");
 
         // 버튼 누르면 애니메이션 실행
         btn_test.setOnClickListener(new View.OnClickListener() {
@@ -124,6 +125,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onButtonReRoll(View view) {
+        count = count - 2;
+        coinCount.setText(count+"");
         int rand = getRandom(5,0 );
         shop1.setImageResource(images[rand]);
         rand = getRandom(5, 0);

@@ -204,12 +204,12 @@
 
     <TextView
         android:id="@+id/coin_count"
-        android:layout_width="50dp"
+        android:layout_width="70dp"
         android:layout_height="50dp"
-        android:layout_marginStart="550dp"
+        android:layout_marginStart="560dp"
         android:layout_marginTop="4dp"
-        android:text="x 0"
-        android:textSize="35sp"
+        android:text="100"
+        android:textSize="30sp"
         android:textColor="@color/black"
         android:visibility="invisible"
         app:layout_constraintStart_toEndOf="@+id/shopButton"
