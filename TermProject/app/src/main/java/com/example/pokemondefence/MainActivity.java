@@ -1,20 +1,18 @@
 package com.example.pokemondefence;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
-    int[] images = new int[] {R.drawable.test1, R.drawable.test2, R.drawable.test3, R.drawable.test4, R.drawable.test5};
-
+    // int[] images = new int[] {R.drawable.test1, R.drawable.test2, R.drawable.test3, R.drawable.test4, R.drawable.test5};
+    int[] images = new int[] {R.mipmap.balsheng, R.mipmap.esanghaessi, R.mipmap.firy, R.mipmap.ggobuk, R.mipmap.gugu, R.mipmap.kash, R.mipmap.merif,
+                                R.mipmap.minyung, R.mipmap.modapi, R.mipmap.pikachu, R.mipmap.sixtail, R.mipmap.ssodra};
     // 애니메이션 변수 선언
     Animation anim_test;
     Animation anim_test2;
@@ -27,13 +25,14 @@ public class MainActivity extends AppCompatActivity {
     ImageView monster4;
     ImageView monster5;
 
-    ImageButton imageView1;
-    ImageButton imageView2;
-    ImageButton imageView3;
-    ImageButton imageView4;
-    ImageButton imageView5;
+    ImageButton shop1;
+    ImageButton shop2;
+    ImageButton shop3;
+    ImageButton shop4;
+    ImageButton shop5;
 
     ImageButton reRoll;
+    ImageView coin;
     int imageIndex = 0;
 
 
@@ -56,12 +55,13 @@ public class MainActivity extends AppCompatActivity {
         monster5 = findViewById(R.id.monster5);
 
 
-        imageView1 = findViewById(R.id.test1);
-        imageView2 = findViewById(R.id.test2);
-        imageView3 = findViewById(R.id.test3);
-        imageView4 = findViewById(R.id.test4);
-        imageView5 = findViewById(R.id.test5);
+        shop1 = findViewById(R.id.shop1);
+        shop2 = findViewById(R.id.shop2);
+        shop3 = findViewById(R.id.shop3);
+        shop4 = findViewById(R.id.shop4);
+        shop5 = findViewById(R.id.shop5);
         reRoll = findViewById(R.id.re_roll);
+        coin = findViewById(R.id.coin);
 
         // 버튼 누르면 애니메이션 실행
         btn_test.setOnClickListener(new View.OnClickListener() {
@@ -89,36 +89,38 @@ public class MainActivity extends AppCompatActivity {
     private void changeImage() {
 
         if(imageIndex == 0){
-            imageView1.setVisibility(View.VISIBLE);
-            imageView2.setVisibility(View.VISIBLE);
-            imageView3.setVisibility(View.VISIBLE);
-            imageView4.setVisibility(View.VISIBLE);
-            imageView5.setVisibility(View.VISIBLE);
+            shop1.setVisibility(View.VISIBLE);
+            shop2.setVisibility(View.VISIBLE);
+            shop3.setVisibility(View.VISIBLE);
+            shop4.setVisibility(View.VISIBLE);
+            shop5.setVisibility(View.VISIBLE);
             reRoll.setVisibility(View.VISIBLE);
+            coin.setVisibility(View.VISIBLE);
             imageIndex = 1;
         }
 
         else if(imageIndex == 1){
-            imageView1.setVisibility(View.INVISIBLE);
-            imageView2.setVisibility(View.INVISIBLE);
-            imageView3.setVisibility(View.INVISIBLE);
-            imageView4.setVisibility(View.INVISIBLE);
-            imageView5.setVisibility(View.INVISIBLE);
+            shop1.setVisibility(View.INVISIBLE);
+            shop2.setVisibility(View.INVISIBLE);
+            shop3.setVisibility(View.INVISIBLE);
+            shop4.setVisibility(View.INVISIBLE);
+            shop5.setVisibility(View.INVISIBLE);
             reRoll.setVisibility(View.INVISIBLE);
+            coin.setVisibility(View.INVISIBLE);
             imageIndex = 0;
         }
     }
 
     public void onButtonReRoll(View view) {
         int rand = getRandom(5,0 );
-        imageView1.setImageResource(images[rand]);
+        shop1.setImageResource(images[rand]);
         rand = getRandom(5, 0);
-        imageView2.setImageResource(images[rand]);
+        shop2.setImageResource(images[rand]);
         rand = getRandom(5, 0);
-        imageView3.setImageResource(images[rand]);
+        shop3.setImageResource(images[rand]);
         rand = getRandom(5, 0);
-        imageView4.setImageResource(images[rand]);
+        shop4.setImageResource(images[rand]);
         rand = getRandom(5, 0);
-        imageView5.setImageResource(images[rand]);
+        shop5.setImageResource(images[rand]);
     }
 }
