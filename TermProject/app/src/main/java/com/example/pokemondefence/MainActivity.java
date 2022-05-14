@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     // 돈
     TextView coinCount;
-    int count = 100;
+    int count = 50;
 
     int imageIndex = 0;
 
