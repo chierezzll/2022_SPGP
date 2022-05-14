@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
     Animation anim_test3;
     Animation anim_test4;
     Animation anim_test5;
-    ImageButton btn_test;
+    ImageButton startWave;
     ImageView monster2;
     ImageView monster3;
     ImageView monster4;
     ImageView monster5;
-
+    
     ImageButton shop1;
     ImageButton shop2;
     ImageButton shop3;
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         anim_test3 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims3);
         anim_test4 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims4);
         anim_test5 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anims5);
-        btn_test = findViewById(R.id.btn_test);
+        startWave = findViewById(R.id.btn_test);
         monster2 = findViewById(R.id.monster2);
         monster3 = findViewById(R.id.monster3);
         monster4 = findViewById(R.id.monster4);
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         coinCount.setText(count+"");
 
         // 버튼 누르면 애니메이션 실행
-        btn_test.setOnClickListener(new View.OnClickListener() {
+        startWave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startAnim();
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startAnim() {
-        btn_test.startAnimation(anim_test);
+        startWave.startAnimation(anim_test);
         monster2.startAnimation(anim_test2);
         monster3.startAnimation(anim_test3);
         monster4.startAnimation(anim_test4);
