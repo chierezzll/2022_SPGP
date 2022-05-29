@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     ImageView monster3;
     ImageView monster4;
     ImageView monster5;
-    
+
     ImageButton shop1;
     ImageButton shop2;
     ImageButton shop3;
