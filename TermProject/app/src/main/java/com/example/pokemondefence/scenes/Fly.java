@@ -9,13 +9,14 @@ import com.example.pokemondefence.R;
 import com.example.pokemondefence.framework.game.RecycleBin;
 import com.example.pokemondefence.framework.interfaces.Recyclable;
 import com.example.pokemondefence.framework.objects.SheetSprite;
+import com.example.pokemondefence.framework.objects.Sprite;
 import com.example.pokemondefence.framework.res.Metrics;
 import com.example.pokemondefence.framework.util.Gauge;
 
 import java.util.Random;
 
 
-public class Fly extends SheetSprite implements Recyclable {
+public class Fly extends Sprite implements Recyclable {
 
     private Type type;
     private float dist;
@@ -67,7 +68,8 @@ public class Fly extends SheetSprite implements Recyclable {
     }
 
     private Fly() {
-        super(R.mipmap.galaga_flies, 2.0f);
+        //super(R.mipmap.galaga_flies, 2.0f);
+        super(0, 0, TiledSprite.unit, TiledSprite.unit, R.mipmap.monster);
         if (rects_array == null) {
             int w = bitmap.getWidth();
             int h = bitmap.getHeight();
@@ -81,6 +83,7 @@ public class Fly extends SheetSprite implements Recyclable {
                 }
             }
         }
+
         gauge = new Gauge(
                 Metrics.size(R.dimen.fly_gauge_thickness_fg),
                 R.color.fly_gauge_fg,
@@ -105,7 +108,7 @@ public class Fly extends SheetSprite implements Recyclable {
             }
         }
         this.type = type;
-        srcRects = rects_array[type.ordinal()];
+        //srcRects = rects_array[type.ordinal()];
         this.speed = speed;
         radius = TiledSprite.unit * size;
         dist = 0;
