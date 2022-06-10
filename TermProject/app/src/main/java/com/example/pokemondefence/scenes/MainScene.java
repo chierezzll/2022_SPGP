@@ -107,9 +107,9 @@ public class MainScene extends Scene implements TowerMenu.Listener {
                     R.mipmap.upgrade);
         } else {
             towerMenu.setMenu(x, y,
-                    R.mipmap.f_01_01,
-                    R.mipmap.f_02_01,
-                    R.mipmap.f_03_01);
+                    R.mipmap.p_01_01,
+                    R.mipmap.p_01_02,
+                    R.mipmap.p_01_03);
         }
         return true;
     }
@@ -141,13 +141,13 @@ public class MainScene extends Scene implements TowerMenu.Listener {
         }
         int level = 0;
         switch (menuMipmapResId) {
-            case R.mipmap.f_01_01:
+            case R.mipmap.p_01_01:
                 level = 1;
                 break;
-            case R.mipmap.f_02_01:
+            case R.mipmap.p_01_02:
                 level = 2;
                 break;
-            case R.mipmap.f_03_01:
+            case R.mipmap.p_01_03:
                 level = 3;
                 break;
             default:
