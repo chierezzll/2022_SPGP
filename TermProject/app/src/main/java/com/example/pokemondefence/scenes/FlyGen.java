@@ -22,7 +22,7 @@ public class FlyGen implements GameObject {
         speed = 2 * TiledSprite.unit;
         interval = GEN_INTERVAL;
         waveInteral = WAVE_INTERVAL;
-        wave = 0;
+        wave = 1;
         normalPhase = true;
     }
 
@@ -38,6 +38,11 @@ public class FlyGen implements GameObject {
                 if (interval < MIN_INTERVAL) interval = MIN_INTERVAL;
             }
             if (waveTime > waveInteral) {
+                spawn(false);
+                waveTime = 0;
+                normalPhase = false;
+            }
+            if (wave == 5 || wave == 10 || wave == 15 || wave == 20 ) {
                 spawn(true);
                 waveTime = 0;
                 normalPhase = false;
@@ -48,6 +53,7 @@ public class FlyGen implements GameObject {
                 waveTime = 0;
                 normalPhase = true;
                 MainScene scene = MainScene.get();
+                wave += 1;
                 scene.wave.add(1);
             }
         }
