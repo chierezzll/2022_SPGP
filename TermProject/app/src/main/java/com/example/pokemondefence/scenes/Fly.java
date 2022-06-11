@@ -59,14 +59,6 @@ public class Fly extends Sprite implements Recyclable {
             return HEALTHS[ordinal()];
         }
         static float[] HEALTHS = { 150, 50, 30, 20, 10 };
-        static int[] POSSIBILITIES = { 0, 10, 20, 30, 40 };
-        static int POSSIBILITY_SUM;
-        static {
-            POSSIBILITY_SUM = 0;
-            for (int p : POSSIBILITIES) {
-                POSSIBILITY_SUM += p;
-            }
-        }
     }
     public static Fly get(Type type, float speed, float size) {
         Fly fly = (Fly) RecycleBin.get(Fly.class);
@@ -106,16 +98,8 @@ public class Fly extends Sprite implements Recyclable {
     private Rect[][] rects_array;
     private void init(Type type, float speed, float size) {
         if (type == Type.RANDOM) {
-            int value = random.nextInt(Type.POSSIBILITY_SUM);
-//            Log.d("Fly", "value=" + value);
-            for (int i = 0; i < Type.POSSIBILITIES.length; i++) {
-                value -= Type.POSSIBILITIES[i];
-                if (value < 0) {
-                    type = Type.values()[i];
-//                    Log.d("Fly", "type=" + type + " i=" + i);
-                    break;
-                }
-            }
+            int index = random.nextInt(Type.COUNT.ordinal() - 1) + 1;
+            type = Type.values()[index];
         }
         this.type = type;
         //srcRects = rects_array[type.ordinal()];
@@ -126,7 +110,6 @@ public class Fly extends Sprite implements Recyclable {
         health = maxHealth = type.getMaxHealth() * size;
     }
 
-    public static int getLife (){return 1;}
 
     private float[] pos = new float[2];
     private float[] tan = new float[2];

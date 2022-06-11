@@ -23,6 +23,7 @@ public class MainScene extends Scene implements TowerMenu.Listener {
     private TowerMenu towerMenu;
     public Score score;
     public Score life;
+    public Score wave;
 
 
     int[] images = new int[] {
@@ -115,6 +116,12 @@ public class MainScene extends Scene implements TowerMenu.Listener {
         life.set(20);
         add(Layer.score.ordinal(), life);
 
+        wave = new Score(R.mipmap.gold_number,
+                TiledSprite.unit / 2.0f,TiledSprite.unit * 30.5f,
+                TiledSprite.unit * 1.2f);
+        wave.set(1);
+        add(Layer.score.ordinal(), wave);
+
 
 
     }
@@ -142,8 +149,7 @@ public class MainScene extends Scene implements TowerMenu.Listener {
         if (cannon != null) {
             towerMenu.setMenu(x, y,
                     R.mipmap.uninstall,
-                    R.mipmap.upgrade,
-                    images[12]);
+                    R.mipmap.upgrade);
         } else {
             towerMenu.setMenu(x, y,
                     images[rand],
@@ -178,13 +184,6 @@ public class MainScene extends Scene implements TowerMenu.Listener {
                     int price = cannon.getSellPrice();
                     score.add(price);
                     remove(cannon);
-                    break;
-                case R.drawable.re_roll:
-                    rand = getRandom(11,0 );
-                    rand2 = getRandom(11,0 );
-                    rand3 = getRandom(11,0 );
-                    rand4 = getRandom(11,0 );
-                    rand5 = getRandom(11,0 );
                     break;
             }
             selector.select(-1, -1);
@@ -269,6 +268,12 @@ public class MainScene extends Scene implements TowerMenu.Listener {
         add(Layer.cannon.ordinal(), cannon);
         selector.select(-1, -1);
         towerMenu.setMenu(-1, -1);
+
+        rand = getRandom(11,0 );
+        rand2 = getRandom(11,0 );
+        rand3 = getRandom(11,0 );
+        rand4 = getRandom(11,0 );
+        rand5 = getRandom(11,0 );
 
 
 

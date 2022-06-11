@@ -8,7 +8,7 @@ import java.util.Random;
 
 
 public class FlyGen implements GameObject {
-    private static final float GEN_INTERVAL = 1.0f;
+    private static final float GEN_INTERVAL = 3.0f;
     private static final float MIN_INTERVAL = 0.1f;
     private static final float WAVE_INTERVAL = 30.0f;
     private float time, interval;
@@ -47,13 +47,15 @@ public class FlyGen implements GameObject {
             if (waveTime > waveInteral || MainScene.get().objectsAt(layerIndex).size() == 0) {
                 waveTime = 0;
                 normalPhase = true;
+                MainScene scene = MainScene.get();
+                scene.wave.add(1);
             }
         }
     }
 
     private void spawn(boolean boss) {
-        float size = (float) (random.nextDouble() * 0.3 + 0.7);
-        float speed = (float) (this.speed * (random.nextDouble() * 0.2 + 0.9));
+        float size = (float) (0.2 * 0.3 + 0.7);
+        float speed = (float) (this.speed * (1 * 0.2 + 0.9));
         Fly.Type type = Fly.Type.boss;
         if (boss) {
             size *= 1.5;
