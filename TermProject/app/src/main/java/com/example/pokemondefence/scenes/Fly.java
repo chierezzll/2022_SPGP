@@ -55,11 +55,12 @@ public class Fly extends Sprite implements Recyclable {
 
     public enum Type {
         boss, red, blue, cyan, dragon, COUNT, RANDOM;
-        float getMaxHealth() {
-            return HEALTHS[ordinal()];
-        }
+//        float getMaxHealth() {
+//            return HEALTHS[ordinal()];
+//        }
         static float[] HEALTHS = { 150, 50, 30, 20, 10 };
     }
+
     public static Fly get(Type type, float speed, float size) {
         Fly fly = (Fly) RecycleBin.get(Fly.class);
         if (fly == null) {
@@ -70,7 +71,6 @@ public class Fly extends Sprite implements Recyclable {
     }
 
     private Fly() {
-        //super(R.mipmap.galaga_flies, 2.0f);
         super(0, 0, TiledSprite.unit, TiledSprite.unit, R.mipmap.monster);
         if (rects_array == null) {
             int w = bitmap.getWidth();
@@ -97,17 +97,21 @@ public class Fly extends Sprite implements Recyclable {
 
     private Rect[][] rects_array;
     private void init(Type type, float speed, float size) {
-        if (type == Type.RANDOM) {
-            int index = random.nextInt(Type.COUNT.ordinal() - 1) + 1;
-            type = Type.values()[index];
-        }
+//        if (type == Type.RANDOM) {
+//            int index = random.nextInt(Type.COUNT.ordinal() - 1) + 1;
+//            type = Type.values()[index];
+//        }
+
         this.type = type;
         //srcRects = rects_array[type.ordinal()];
         this.speed = speed;
+
         radius = TiledSprite.unit * size;
         dist = 0;
         dx = dy = 0;
-        health = maxHealth = type.getMaxHealth() * size;
+        //health = maxHealth = type.getMaxHealth() * size;
+        MainScene scene = MainScene.get();
+        health = maxHealth = 50 * scene.wave.get();
     }
 
 
