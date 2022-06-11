@@ -1,6 +1,7 @@
 package com.example.pokemondefence.scenes;
 
 import android.view.MotionEvent;
+import android.view.ViewDebug;
 
 import com.example.pokemondefence.R;
 import com.example.pokemondefence.framework.game.Scene;
@@ -21,13 +22,14 @@ public class MainScene extends Scene implements TowerMenu.Listener {
     private Selector selector;
     private TowerMenu towerMenu;
     public Score score;
-    public Button reRoll;
+    public Score life;
 
 
     int[] images = new int[] {
             R.mipmap.p_01_01,R.mipmap.p_01_02,R.mipmap.p_01_03,R.mipmap.p_02_01,R.mipmap.p_02_02,
             R.mipmap.p_03_01,R.mipmap.p_03_02,R.mipmap.p_04_01,R.mipmap.p_05_01,R.mipmap.p_06_01,
             R.mipmap.p_06_02,R.mipmap.p_07_01,R.drawable.re_roll};
+
 
     int getRandom(int range, int min) {
         return (int)(Math.random() * range) + min;
@@ -107,23 +109,17 @@ public class MainScene extends Scene implements TowerMenu.Listener {
         score.set(100);
         add(Layer.score.ordinal(), score);
 
-        float btn_x = size(1.5f);
-        float btn_y = size(8.75f);
-        float btn_w = size(8.0f / 3.0f);
-        float btn_h = size(1.0f);
+        life = new Score(R.mipmap.gold_number,
+                TiledSprite.unit / 2.0f,TiledSprite.unit * 15.0f,
+                TiledSprite.unit * 1.2f);
+        life.set(20);
+        add(Layer.score.ordinal(), life);
 
-        add(Layer.controller.ordinal(), new Button(
-                btn_x, btn_y, btn_w, btn_h, R.drawable.re_roll, R.mipmap.f_01_01,
-                new Button.Callback() {
-                    @Override
-                    public boolean onTouch(Button.Action action) {
-                        score.add(50);
 
-                        return true;
-                    }
-                }
-        ));
+
     }
+    public static int getLife (){return 20;}
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
@@ -275,15 +271,6 @@ public class MainScene extends Scene implements TowerMenu.Listener {
         towerMenu.setMenu(-1, -1);
 
 
-
-        towerMenu.setMenu(selector.getX(), selector.getY(),
-                images[rand],
-                images[rand2],
-                images[rand3],
-                images[rand4],
-                images[rand5],
-                images[12]
-        );
 
     }
 }

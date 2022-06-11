@@ -13,7 +13,7 @@ public class Cannon extends Sprite {
     private int level;
     private float power, interval, shellSpeed;
     private float angle;
-    private float num;
+    private int num;
     private float time;
     private float range;
     private Bitmap barrelBitmap;
@@ -34,15 +34,16 @@ public class Cannon extends Sprite {
         barrelRect.set(dstRect);
         barrelRect.inset(-radius, -radius);
     }
-//    private static int[] BITMAP_IDS = {
-//            R.mipmap.f_01_01,R.mipmap.f_02_01,R.mipmap.f_03_01,R.mipmap.f_04_01,R.mipmap.f_05_01,
-//            R.mipmap.f_06_01,R.mipmap.f_07_01,R.mipmap.f_08_01,R.mipmap.f_09_01,R.mipmap.f_10_01,
-//    };
+
 
     private static int[] BITMAP_IDS = {
             R.mipmap.p_01_01,R.mipmap.p_01_02,R.mipmap.p_01_03,R.mipmap.p_02_01,R.mipmap.p_02_02,
             R.mipmap.p_03_01,R.mipmap.p_03_02,R.mipmap.p_04_01,R.mipmap.p_05_01,R.mipmap.p_06_01,
             R.mipmap.p_06_02,R.mipmap.p_07_01,
+
+            R.mipmap.p_01_11,R.mipmap.p_01_12,R.mipmap.p_01_13,R.mipmap.p_02_11,R.mipmap.p_02_12,
+            R.mipmap.p_03_11,R.mipmap.p_03_12,R.mipmap.p_04_11,R.mipmap.p_05_11,R.mipmap.p_06_11,
+            R.mipmap.p_06_12,R.mipmap.p_07_11,
     };
 
 
@@ -111,7 +112,7 @@ public class Cannon extends Sprite {
         if (level == BITMAP_IDS.length) return;
 
         level += 1;
-        bitmap = BitmapPool.get(BITMAP_IDS[level - 1]);
+        bitmap = BitmapPool.get(BITMAP_IDS[num + 11]);
         this.range = 5 * TiledSprite.unit * level;
 
         shellSpeed *= 1.2;

@@ -6,12 +6,19 @@ import android.graphics.PathMeasure;
 import android.graphics.Rect;
 
 import com.example.pokemondefence.R;
+import com.example.pokemondefence.app.GameActivity;
+import com.example.pokemondefence.app.MainActivity;
 import com.example.pokemondefence.framework.game.RecycleBin;
 import com.example.pokemondefence.framework.interfaces.Recyclable;
+import com.example.pokemondefence.framework.objects.Score;
 import com.example.pokemondefence.framework.objects.SheetSprite;
+import com.example.pokemondefence.framework.interfaces.GameObject;
 import com.example.pokemondefence.framework.objects.Sprite;
 import com.example.pokemondefence.framework.res.Metrics;
 import com.example.pokemondefence.framework.util.Gauge;
+
+import com.example.pokemondefence.framework.game.Scene;
+import com.example.pokemondefence.framework.view.GameView;
 
 import java.util.Random;
 
@@ -25,10 +32,13 @@ public class Fly extends Sprite implements Recyclable {
     private float dx, dy;
     private float health, maxHealth;
     private Gauge gauge;
+    public Score life;
 
     private static Random random = new Random();
     //private static Path path;
     private static PathMeasure pathMeasure;
+    private static int cnt = 0;
+
     public static void setPath(Path path) {
         //Fly.path = path;
         Fly.pathMeasure = new PathMeasure(path, false);
@@ -116,13 +126,22 @@ public class Fly extends Sprite implements Recyclable {
         health = maxHealth = type.getMaxHealth() * size;
     }
 
+    public static int getLife (){return 1;}
+
     private float[] pos = new float[2];
     private float[] tan = new float[2];
     @Override
     public void update(float frameTime) {
         dist += speed * frameTime;
         if (dist > pathMeasure.getLength()) {
+            MainScene scene = MainScene.get();
             MainScene.get().remove(this);
+            scene.life.add(-1);
+            cnt = cnt + 1;
+            if (cnt > 20) {
+                GameView.view.getActivity().finish();
+
+            }
             return;
         }
 
@@ -148,6 +167,12 @@ public class Fly extends Sprite implements Recyclable {
         canvas.restore();
         gauge.setValue(health / maxHealth);
         gauge.draw(canvas, x, y + radius);
+
+        life = new Score(R.mipmap.gold_number,
+                TiledSprite.unit / 2.0f,TiledSprite.unit * 15.0f,
+                TiledSprite.unit * 1.2f);
+        life.set(20);
+
     }
 
     @Override
