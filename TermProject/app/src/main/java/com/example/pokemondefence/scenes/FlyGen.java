@@ -58,7 +58,7 @@ public class FlyGen implements GameObject {
         if (boss) {
             size *= 1.5;
         } else {
-            type = Fly.Type.RANDOM;
+            type = Fly.Type.red;
         }
         Fly fly = Fly.get(type, speed, size);
         MainScene.get().add(MainScene.Layer.enemy.ordinal(), fly);

@@ -13,20 +13,22 @@ public class Cannon extends Sprite {
     private int level;
     private float power, interval, shellSpeed;
     private float angle;
+    private float num;
     private float time;
     private float range;
     private Bitmap barrelBitmap;
     private RectF barrelRect = new RectF();
-    public Cannon(int level, float x, float y, float power, float interval) {
+    public Cannon(int level, int num, float x, float y, float power, float interval) {
         super(x, y, TiledSprite.unit, TiledSprite.unit, R.mipmap.p_01_01);
         this.level = level;
         this.power = power;
+        this.num = num;
         this.interval = interval;
         this.shellSpeed = TiledSprite.unit * 20;
         this.time = 0;
         this.range = 5 * TiledSprite.unit * level;
-        if (1 < level && level <= BITMAP_IDS.length) {
-            bitmap = BitmapPool.get(BITMAP_IDS[level - 1]);
+        if (1 < num && num <= BITMAP_IDS.length) {
+            bitmap = BitmapPool.get(BITMAP_IDS[num - 1]);
         }
         barrelBitmap = BitmapPool.get(R.mipmap.frame);
         barrelRect.set(dstRect);
