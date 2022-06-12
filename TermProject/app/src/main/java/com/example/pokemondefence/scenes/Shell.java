@@ -10,6 +10,7 @@ import com.example.pokemondefence.framework.interfaces.Recyclable;
 import com.example.pokemondefence.framework.objects.Sprite;
 import com.example.pokemondefence.framework.res.BitmapPool;
 import com.example.pokemondefence.framework.res.Metrics;
+import com.example.pokemondefence.framework.res.Sound;
 
 import java.util.ArrayList;
 
@@ -81,6 +82,7 @@ public class Shell extends Sprite implements Recyclable {
             scene.remove(this);
             if (splash) {
                 explode();
+                Sound.playEffect(R.raw.jelly_item);
                 return;
             }
             boolean dead = target.decreaseHealth(power);

@@ -1,18 +1,15 @@
 package com.example.pokemondefence.scenes;
 
 import android.view.MotionEvent;
-import android.view.ViewDebug;
 
 import com.example.pokemondefence.R;
 import com.example.pokemondefence.framework.game.Scene;
 import com.example.pokemondefence.framework.interfaces.GameObject;
-import com.example.pokemondefence.framework.objects.Button;
 import com.example.pokemondefence.framework.objects.Score;
-import com.example.pokemondefence.framework.objects.Sprite;
 import com.example.pokemondefence.framework.res.Metrics;
+import com.example.pokemondefence.framework.res.Sound;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 
 public class MainScene extends Scene implements TowerMenu.Listener {
@@ -74,6 +71,7 @@ public class MainScene extends Scene implements TowerMenu.Listener {
                 nearest = fly;
             }
         }
+
         return nearest;
     }
 
@@ -130,6 +128,7 @@ public class MainScene extends Scene implements TowerMenu.Listener {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        Sound.playEffect(R.raw.touch);
         if (event.getAction() != MotionEvent.ACTION_DOWN) {
             return false;
         }
@@ -277,5 +276,25 @@ public class MainScene extends Scene implements TowerMenu.Listener {
 
 
 
+    }
+
+    @Override
+    public void start() {
+        Sound.playMusic(R.raw.main);
+    }
+
+    @Override
+    public void pause() {
+        Sound.pauseMusic();
+    }
+
+    @Override
+    public void resume() {
+        Sound.resumeMusic();
+    }
+
+    @Override
+    public void end() {
+        Sound.stopMusic();
     }
 }

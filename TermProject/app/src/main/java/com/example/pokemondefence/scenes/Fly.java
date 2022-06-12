@@ -15,6 +15,7 @@ import com.example.pokemondefence.framework.objects.SheetSprite;
 import com.example.pokemondefence.framework.interfaces.GameObject;
 import com.example.pokemondefence.framework.objects.Sprite;
 import com.example.pokemondefence.framework.res.Metrics;
+import com.example.pokemondefence.framework.res.Sound;
 import com.example.pokemondefence.framework.util.Gauge;
 
 import com.example.pokemondefence.framework.game.Scene;
@@ -125,6 +126,7 @@ public class Fly extends Sprite implements Recyclable {
         if (dist > pathMeasure.getLength()) {
             MainScene scene = MainScene.get();
             MainScene.get().remove(this);
+            Sound.playEffect(R.raw.lose);
             scene.life.add(-1);
             cnt = cnt + 1;
             if (cnt > 20) {

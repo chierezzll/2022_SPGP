@@ -7,6 +7,7 @@ import android.graphics.RectF;
 import com.example.pokemondefence.R;
 import com.example.pokemondefence.framework.objects.Sprite;
 import com.example.pokemondefence.framework.res.BitmapPool;
+import com.example.pokemondefence.framework.res.Sound;
 
 
 public class Cannon extends Sprite {
@@ -97,6 +98,7 @@ public class Cannon extends Sprite {
     }
 
     private void fireTo(Fly fly) {
+        Sound.playEffect(R.raw.fire);
         boolean splash = level >= 3;
         Shell shell = Shell.get(level, x, y, fly, angle, shellSpeed, power, splash);
         MainScene.get().add(MainScene.Layer.shell.ordinal(), shell);
