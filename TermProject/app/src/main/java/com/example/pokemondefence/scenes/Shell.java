@@ -82,13 +82,13 @@ public class Shell extends Sprite implements Recyclable {
             scene.remove(this);
             if (splash) {
                 explode();
-                Sound.playEffect(R.raw.jelly_item);
                 return;
             }
             boolean dead = target.decreaseHealth(power);
             if (dead) {
                 scene.remove(target);
                 scene.score.add(target.score());
+                Sound.playEffect(R.raw.coin);
                 this.target = null;
             }
         }
