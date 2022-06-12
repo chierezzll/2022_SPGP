@@ -248,7 +248,7 @@ public class MainScene extends Scene implements TowerMenu.Listener {
                 rand4 = getRandom(11,0 );
                 rand5 = getRandom(11,0 );
 
-                score.add(-20);
+                score.add(-10);
 
                 selector.select(-1, -1);
                 towerMenu.setMenu(-1, -1);
