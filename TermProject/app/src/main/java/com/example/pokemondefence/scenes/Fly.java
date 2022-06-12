@@ -50,15 +50,15 @@ public class Fly extends Sprite implements Recyclable {
     }
 
     public int score() {
-        return Math.round(maxHealth / 10) * 10;
+        return Math.round(maxHealth / 20);
     }
 
     public enum Type {
         boss, red, blue, cyan, dragon, COUNT, RANDOM;
-//        float getMaxHealth() {
-//            return HEALTHS[ordinal()];
-//        }
-        static float[] HEALTHS = { 150, 50, 30, 20, 10 };
+        float getMaxHealth() {
+            return HEALTHS[ordinal()];
+        }
+        static float[] HEALTHS = { 1000, 50, 30, 20, 10 };
     }
 
     public static Fly get(Type type, float speed, float size) {
@@ -111,7 +111,9 @@ public class Fly extends Sprite implements Recyclable {
         dx = dy = 0;
         //health = maxHealth = type.getMaxHealth() * size;
         MainScene scene = MainScene.get();
-        health = maxHealth = 50 * scene.wave.get();
+
+        //health = maxHealth = 50 * scene.wave.get();
+        health = maxHealth = type.getMaxHealth() * scene.wave.get();
     }
 
 

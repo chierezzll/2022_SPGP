@@ -64,6 +64,7 @@ public class FlyGen implements GameObject {
         float speed = (float) (this.speed * (1 * 0.2 + 0.9));
         Fly.Type type = Fly.Type.boss;
         if (boss) {
+
             size *= 1.5;
         } else {
             type = Fly.Type.red;
