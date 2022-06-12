@@ -44,6 +44,10 @@ public class Cannon extends Sprite {
             R.mipmap.p_01_11,R.mipmap.p_01_12,R.mipmap.p_01_13,R.mipmap.p_02_11,R.mipmap.p_02_12,
             R.mipmap.p_03_11,R.mipmap.p_03_12,R.mipmap.p_04_11,R.mipmap.p_05_11,R.mipmap.p_06_11,
             R.mipmap.p_06_12,R.mipmap.p_07_11,
+
+            R.mipmap.p_01_21,R.mipmap.p_01_22,R.mipmap.p_01_23,R.mipmap.p_02_21,R.mipmap.p_02_22,
+            R.mipmap.p_03_21,R.mipmap.p_03_12,R.mipmap.p_04_21,R.mipmap.p_05_21,R.mipmap.p_06_11,
+            R.mipmap.p_06_22,R.mipmap.p_07_21,
     };
 
 
@@ -93,7 +97,7 @@ public class Cannon extends Sprite {
     }
 
     private void fireTo(Fly fly) {
-        boolean splash = level >= 4;
+        boolean splash = level >= 3;
         Shell shell = Shell.get(level, x, y, fly, angle, shellSpeed, power, splash);
         MainScene.get().add(MainScene.Layer.shell.ordinal(), shell);
         //Log.d("CannonFire", "" + shell);
@@ -112,11 +116,12 @@ public class Cannon extends Sprite {
         if (level == BITMAP_IDS.length) return;
 
         level += 1;
+
         bitmap = BitmapPool.get(BITMAP_IDS[num + 11]);
         this.range = 5 * TiledSprite.unit * level;
-
-        shellSpeed *= 1.2;
+        num += 12;
+        shellSpeed *= 1.5;
         interval *= 0.9;
-        power *= 1.2;
+        power *= 1.5;
     }
 }
